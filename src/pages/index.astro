@@ -1,17 +1,35 @@
 ---
-
+import Layout from "@/layouts/Layout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Home">
+  <main class="h-dvh min-h-120 grid grid-cols-3 grid-rows-5 gap-1">
+    <header id="header">Header</header>
+    <aside id="leftNavBar">Aside Nav Bar</aside>
+    <section id="content">Main Content</section>
+  </main>
+</Layout>
+
+<style>
+  main > * {
+    border-radius: 6px;
+  }
+
+  #header {
+    grid-column: span 3 / span 3;
+    background-color: bisque;
+  }
+
+  #leftNavBar {
+    grid-row: span 4 / span 4;
+    grid-row-start: 2;
+    background-color: blue;
+  }
+
+  #content {
+    grid-column: span 2 / span 2;
+    grid-row: span 4 / span 4;
+    grid-row-start: 2;
+    background-color: teal;
+  }
+</style>
