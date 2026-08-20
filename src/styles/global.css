@@ -1,1 +1,8 @@
 @import "tailwindcss";
+
+@theme {
+  --font-share-tech: "Share Tech", monospace;
+  --font-share-tech-mono: "Share Tech Mono", monospace;
+  /* Inject custom font families */
+  --font-display: "Inter", sans-serif;
+}

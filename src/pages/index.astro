@@ -1,17 +1,20 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
 ---
 
 <Layout title="Home">
   <main class="h-dvh min-h-120 bg-teal-500 grid grid-cols-3 grid-rows-5 gap-1">
-    <header class="rounded bg-red-500 col-span-3">Header</header>
+    <Header title="Index Header Title" />
+
     <aside class="rounded bg-blue-400 row-span-4 row-start-2">
-      Aside Nav Bar
+      <p class="font-share-tech">Aside Nav Bar</p>
     </aside>
+
     <section
       class="bg-cyan-600 col-span-2 row-span-4 row-start-2 flex items-center justify-center"
     >
-      Main Content
+      <p class="font-share-tech">Main Content</p>
     </section>
   </main>
 </Layout>
