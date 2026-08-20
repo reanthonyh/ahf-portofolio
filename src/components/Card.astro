@@ -1,0 +1,21 @@
+---
+interface Props {
+  href?: string | null;
+  hover?: boolean;
+}
+
+const { href, hover = true } = Astro.props;
+
+const base = "bg-zinc-900 border border-zinc-800 rounded-xl p-5 transition-colors";
+const interactive = hover ? "hover:border-emerald-500/30 group" : "";
+---
+
+{href ? (
+  <a href={href} target="_blank" rel="noopener noreferrer" class={`${base} ${interactive} block`}>
+    <slot />
+  </a>
+) : (
+  <div class={`${base} ${interactive}`}>
+    <slot />
+  </div>
+)}

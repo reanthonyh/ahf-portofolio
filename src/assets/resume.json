@@ -1,0 +1,128 @@
+{
+  "basics": {
+    "name": "Anthony Hernandez",
+    "label": "Software Developer",
+    "image": "",
+    "email": "reanthony12@gmail.com",
+    "phone": "(+51) 912-787-975",
+    "url": "https://example.com",
+    "summary": "A summary of John Doe…",
+    "location": {
+      "address": "125 Isla Hawai St",
+      "postalCode": "LI 15084",
+      "city": "Lima",
+      "countryCode": "PE",
+      "region": "Peru"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "anthony-herlfo",
+        "url": "https://linkedin.com/anthony-herlfo"
+      },
+      {
+        "network": "Github",
+        "username": "reanthonyh",
+        "url": "https://github.com/reanthonyh"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "NTT DATA",
+      "position": "QA TESTER",
+      "url": "https://company.com",
+      "startDate": "2012-07-01",
+      "endDate": "2013-09-30",
+      "summary": "Description…",
+      "highlights": []
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "Miahhh",
+      "position": "Intern",
+      "url": null,
+      "startDate": "2021-06-01",
+      "endDate": "2022-02-02",
+      "summary": "Description…",
+      "highlights": null
+    }
+  ],
+  "education": [
+    {
+      "institution": "Northen Private University",
+      "url": "https://upn.edu.pe/",
+      "area": "System Computer Development",
+      "studyType": "Bachelor",
+      "startDate": "2017-01-01",
+      "endDate": "2022-01-01",
+      "score": "3.36",
+      "courses": ["Relational Databases"]
+    }
+  ],
+  "awards": [
+    {
+      "title": "First of Class",
+      "date": "2021-12-10",
+      "awarder": "UPN",
+      "summary": "Description of being the higest score GPA on the promotion class of the career"
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Certificate",
+      "date": "2021-11-07",
+      "issuer": "Company",
+      "url": "https://certificate.com"
+    }
+  ],
+  "publications": [
+    {
+      "name": "Publication",
+      "publisher": "Company",
+      "releaseDate": "2014-10-01",
+      "url": "https://publication.com",
+      "summary": "Description…"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Flutter Development",
+      "level": "Advanced",
+      "keywords": ["Dart", "BLoC", "Riverpod", "Flutter"]
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Advanced - C1"
+    },
+    {
+      "language": "Spanish",
+      "fluency": "Native speaker"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Art",
+      "keywords": ["Wacom", "Clip Studio Paint"]
+    }
+  ],
+  "references": [
+    {
+      "name": "Victor Chavez",
+      "reference": ""
+    }
+  ],
+  "projects": [
+    {
+      "name": "Summoner Timer",
+      "startDate": "2026-01-01",
+      "endDate": "2026-01-01",
+      "description": "Description...",
+      "highlights": [],
+      "url": ""
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+---
+import Avatar from "./Avatar.astro";
+
+interface NavItem {
+  id: string;
+  label: string;
+}
+
+interface Props {
+  name: string;
+  initials: string;
+  label: string;
+  navItems: NavItem[];
+}
+
+const { name, initials, label, navItems } = Astro.props;
+---
+
+<header
+  class="lg:hidden sticky top-0 z-50 bg-zinc-900/80 backdrop-blur-md border-b border-zinc-800 px-6 py-4"
+>
+  <div class="flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <Avatar initials={initials} size="sm" />
+      <div>
+        <h1 class="text-sm font-bold text-white">{name}</h1>
+        <p class="text-xs text-emerald-400 font-share-tech-mono">{label}</p>
+      </div>
+    </div>
+    <nav class="flex gap-4">
+      {
+        navItems.slice(0, 4).map((item) => (
+          <a
+            href={`#${item.id}`}
+            class="text-xs text-zinc-500 hover:text-white transition-colors"
+          >
+            {item.label}
+          </a>
+        ))
+      }
+    </nav>
+  </div>
+</header>
