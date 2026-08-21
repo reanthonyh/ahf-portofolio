@@ -8,7 +8,7 @@ import tailwindcss from "@tailwindcss/vite";
 // https://astro.build/config
 export default defineConfig({
   site: "https://reanthonyh.github.io",
-  base: "ahf-portfolio",
+  base: "/ahf-portfolio/",
 
   integrations: [react()],
 
