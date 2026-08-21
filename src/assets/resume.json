@@ -1,12 +1,11 @@
 {
   "basics": {
-    "name": "Anthony Hernandez",
-    "label": "Software Developer",
-    "image": "",
+    "name": "Anthony Hernandez Flores",
+    "label": "Full Stack Mobile Developer",
     "email": "reanthony12@gmail.com",
-    "phone": "(+51) 912-787-975",
-    "url": "https://example.com",
-    "summary": "A summary of John Doe…",
+    "phone": "+51 912-787-975",
+    "url": "",
+    "summary": "Full Stack Mobile Developer specializing in crafting exceptional cross-platform experiences with Flutter/Dart. I architect robust applications using Clean Architecture and BLoC/Cubit, ensuring seamless integration of complex native iOS and Android modules when required. My expertise spans the entire development lifecycle—from designing pixel-perfect UIs based on Figma handoffs to deploying scalable backend solutions via Firebase and cloud services. With a strong foundation in QA engineering and experience deploying ML chatbots (RASA), I bring a disciplined, full-stack perspective that drives high-quality delivery, whether building production apps or streamlining internal tools within Agile environments.",
     "location": {
       "address": "125 Isla Hawai St",
       "postalCode": "LI 15084",
@@ -17,8 +16,8 @@
     "profiles": [
       {
         "network": "LinkedIn",
-        "username": "anthony-herlfo",
-        "url": "https://linkedin.com/anthony-herlfo"
+        "username": "anthony-herflo",
+        "url": "https://www.linkedin.com/in/anthony-herflo/"
       },
       {
         "network": "Github",
@@ -29,36 +28,69 @@
   },
   "work": [
     {
-      "name": "NTT DATA",
-      "position": "QA TESTER",
-      "url": "https://company.com",
-      "startDate": "2012-07-01",
-      "endDate": "2013-09-30",
-      "summary": "Description…",
-      "highlights": []
+      "name": "Freelance",
+      "position": "Mobile Application Developer",
+      "url": "",
+      "startDate": "2022-10-01",
+      "endDate": "2025-12-31",
+      "summary": "Developed cross-platform mobile applications using Flutter/Dart for Android, iOS and web platforms. Implemented scalable architecture patterns, Clean Architecture, (BLoC/Cubit) to decouple business logic in complex applications. Designed and integrated REST API endpoints for backend services, enabling efficient asynchronous data handling. Collaborated with UX/UI designers to implement pixel-perfect, responsive interfaces based on Figma/Zeplin specifications. Optimized application performance through state management improvements and load time reduction.",
+      "highlights": [
+        "Delivered production-ready mobile applications for multiple clients with ~95% client satisfaction",
+        "Reduced application load times by 40% through optimized state management and caching strategies",
+        "Maintained high unit test coverage across all client projects",
+        "Successfully managed 3+ concurrent freelance client projects simultaneously",
+        "Delivered 8+ production applications including Certax Web, Jockey Plaza Sorteos, GPM Pop, Gesttiona, and Jwork",
+        "Reduced development time by 25% through reusable component libraries"
+      ]
+    },
+    {
+      "name": "NTT DATA PERU S.A.C.",
+      "position": "QA Tester",
+      "url": "",
+      "startDate": "2022-07-01",
+      "endDate": "2022-09-30",
+      "summary": "Executed comprehensive quality assurance testing for software projects delivered to NTT DATA clients. Planned and executed detailed test cases based on client requirements and functional specifications. Participated in daily Scrum meetings and agile ceremonies to track project progress. Managed tasks and user stories within Jira, ensuring timely delivery and quality standards. Collaborated with development and QA teams to identify and document defects. Conducted regression testing to ensure bug fixes did not introduce new issues. Performed manual and automated testing using various tools and methodologies.",
+      "highlights": [
+        "Maintained ~80% test accuracy rate on all planned test scenarios, with all approved by the Tech Leader for Sprint loading into Jira",
+        "Reduced regression testing time by 30% through systematic test case organization",
+        "Successfully identified 15+ critical bugs in client projects, improving overall quality",
+        "Developed reusable test scripts that saved 6+ hours of manual testing per project",
+        "Planned and executed more than 20 test cases and test scenarios for the Movistar web application project under NTT DATA clients"
+      ]
     }
   ],
   "volunteer": [
     {
-      "organization": "Miahhh",
-      "position": "Intern",
-      "url": null,
+      "name": "Miahh",
+      "position": "Pre-professional Intern",
+      "url": "",
       "startDate": "2021-06-01",
-      "endDate": "2022-02-02",
-      "summary": "Description…",
-      "highlights": null
+      "endDate": "2022-02-28",
+      "summary": "Implemented machine learning chatbot functionality using the RASA framework based on Product Owner requirements. Deployed RASA REST API service onto IBM Cloud servers for production access. Developed Bash scripts for server maintenance and future modifications of the RASA chatbot. Collaborated with the Product Owner to implement chatbot stories and user requirements. Monitored chatbot performance and handled user inquiries during testing phase. Documented all technical decisions and deployment procedures for future reference.",
+      "highlights": [
+        "Successfully deployed a functional ML chatbot with ~90%+ user satisfaction in initial testing",
+        "Automated maintenance procedures with custom Bash scripts, reducing manual intervention",
+        "Enabled scalable chatbot operations through proper REST API deployment",
+        "Gained hands-on experience with cloud deployment and server management on IBM Cloud",
+        "Contributed to a successful chatbot launch with minimal downtime during transition"
+      ]
     }
   ],
   "education": [
     {
       "institution": "Northen Private University",
       "url": "https://upn.edu.pe/",
-      "area": "System Computer Development",
+      "area": "Computer Systems Engineer",
       "studyType": "Bachelor",
       "startDate": "2017-01-01",
       "endDate": "2022-01-01",
       "score": "3.36",
-      "courses": ["Relational Databases"]
+      "courses": [
+        "Maths, Physics & Language",
+        "Algorithms & Data Structures",
+        "Relational Databases",
+        "Networks Cisco I & II"
+      ]
     }
   ],
   "awards": [
@@ -71,19 +103,19 @@
   ],
   "certificates": [
     {
-      "name": "Certificate",
-      "date": "2021-11-07",
-      "issuer": "Company",
-      "url": "https://certificate.com"
+      "name": "Flutter Development",
+      "date": "2025-06-01",
+      "issuer": "Udemy",
+      "url": "https://udemy.com"
     }
   ],
   "publications": [
     {
-      "name": "Publication",
-      "publisher": "Company",
-      "releaseDate": "2014-10-01",
-      "url": "https://publication.com",
-      "summary": "Description…"
+      "name": null,
+      "publisher": null,
+      "releaseDate": null,
+      "url": null,
+      "summary": null
     }
   ],
   "skills": [
@@ -91,6 +123,57 @@
       "name": "Flutter Development",
       "level": "Advanced",
       "keywords": ["Dart", "BLoC", "Riverpod", "Flutter"]
+    },
+    {
+      "name": "Cross-Platform Development",
+      "level": "Advanced",
+      "keywords": ["Flutter", "React Native", "TypeScript"]
+    },
+    {
+      "name": "Mobile Development",
+      "level": "Intermediate",
+      "keywords": ["Kotlin", "Gradle", "Jetpack-Compose", "Swift", "SwiftUI"]
+    },
+    {
+      "name": "Backend & Web",
+      "level": "Intermediate",
+      "keywords": [
+        "Node.js",
+        "Express",
+        "Bun",
+        "JavaScript",
+        "TypeScript",
+        "Astro",
+        "React"
+      ]
+    },
+    {
+      "name": "Cloud & Databases",
+      "level": "Intermediate",
+      "keywords": [
+        "Firebase",
+        "Supabase",
+        "REST APIs",
+        "MySQL",
+        "PostgreSQL",
+        "MongoDB"
+      ]
+    },
+    {
+      "name": "Testing & Architecture",
+      "level": "Advanced",
+      "keywords": [
+        "Clean Architecture",
+        "Unit Testing",
+        "Integration Testing",
+        "BLoC",
+        "Cubit"
+      ]
+    },
+    {
+      "name": "Other Languages/Tools",
+      "level": "Basic",
+      "keywords": ["Rust", "C++", "Bash Scripting"]
     }
   ],
   "languages": [
@@ -107,22 +190,52 @@
     {
       "name": "Art",
       "keywords": ["Wacom", "Clip Studio Paint"]
+    },
+    {
+      "name": "Open Source",
+      "keywords": ["Git", "Rust", "CLI Tools"]
+    },
+    {
+      "name": "Linux",
+      "keywords": ["Arch Linux", "Debian", "Hyperland", "KDE"]
+    },
+    {
+      "name": "Local AI",
+      "keywords": ["Ollama", "Llama.cpp"]
     }
   ],
   "references": [
     {
-      "name": "Victor Chavez",
-      "reference": ""
+      "name": "Victor Chavez _Mentor",
+      "reference": "https://www.linkedin.com/in/viktorchavez/"
     }
   ],
   "projects": [
     {
       "name": "Summoner Timer",
-      "startDate": "2026-01-01",
-      "endDate": "2026-01-01",
-      "description": "Description...",
-      "highlights": [],
-      "url": ""
+      "startDate": "2026-02-12",
+      "endDate": "2026-05-30",
+      "description": "A mobile application built with Flutter that provides an external tool to track League of Legends player enemy skill cooldowns.",
+      "highlights": [
+        "Follows Clean Architecture with Presentation, Domain, and Data layers",
+        "Uses BLoC for state management",
+        "Integrates with RIOT GAMES APIs for real-time data",
+        "Provides intuitive mobile interface for quick reference during matches"
+      ],
+      "url": "https://github.com/reanthonyh/Summoner-Timer"
+    },
+    {
+      "name": "Git Commit TUI",
+      "startDate": "2026-08-21",
+      "endDate": "2026-08-21",
+      "description": "A terminal user interface (TUI) tool written in Rust that helps generate conventional commit titles from staged git changes using AI or interactive fallback.",
+      "highlights": [
+        "AI-powered commit title generation using local LLM (ollama/llama.cpp)",
+        "Interactive fallback with menus to manually select commit type, scope, and description",
+        "gitemoji support for visual commit type selection",
+        "Built with Rust/Cargo, Clap, Inquire, Reqwest, Tokio, Serde, Anyhow, Regex"
+      ],
+      "url": "https://github.com/reanthonyh/Rust-Smart-Commits"
     }
   ]
 }

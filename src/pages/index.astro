@@ -54,7 +54,9 @@ const navItems = [
 ---
 
 <Layout title={`${basics.name} — ${basics.label}`}>
-  <div class="min-h-screen bg-zinc-950 text-zinc-200 font-display">
+  <div class="re-screen min-h-screen text-umbrella-text font-display">
+    <div class="re-fog re-fog-1" aria-hidden="true"></div>
+    <div class="re-fog re-fog-2" aria-hidden="true"></div>
     <Sidebar
       name={basics.name}
       initials={initials}
@@ -73,34 +75,30 @@ const navItems = [
       navItems={navItems}
     />
 
-    <main class="lg:ml-64">
+    <main class="lg:ml-64 relative z-3">
       <!-- Hero / About -->
       <section id="about" class="relative px-8 py-24 lg:px-16 lg:py-32">
-        <div
-          class="absolute top-0 right-0 w-96 h-96 bg-emerald-500/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"
-        >
-        </div>
         <div class="relative max-w-3xl">
-          <p
-            class="text-emerald-400 font-share-tech-mono text-sm mb-4 tracking-wider uppercase"
-          >
-            About Me
-          </p>
-          <h2
-            class="text-4xl lg:text-5xl font-bold text-white leading-tight mb-6"
-          >
-            Hi, I'm <span
-              class="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent"
-              >{basics.name.split(" ")[0]}</span
+          <div class="flex items-center gap-2 mb-4">
+            <p
+              class="data-glow font-share-tech-mono text-sm tracking-wider uppercase"
             >
+              About Me
+            </p>
+          </div>
+          <h2
+            class="text-4xl lg:text-5xl scan-text text-white leading-tight mb-6 uppercase tracking-wide"
+          >
+            Personal File:
+            <span class="text-umbrella-green"> {basics.name}</span>
           </h2>
-          <p class="text-lg text-zinc-400 leading-relaxed mb-8">
+          <p class="text-lg scan-text leading-relaxed mb-8">
             {basics.summary}
           </p>
           <div class="flex flex-wrap gap-3">
             <a
               href={`mailto:${basics.email}`}
-              class="inline-flex items-center gap-2 px-5 py-2.5 bg-emerald-500 hover:bg-emerald-400 text-zinc-950 text-sm font-semibold rounded-lg transition-colors"
+              class="inline-flex items-center gap-2 px-5 py-2.5 bg-umbrella-green hover:bg-white text-black font-share-tech-mono uppercase tracking-wider text-sm border border-umbrella-green transition-colors"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -122,7 +120,7 @@ const navItems = [
                   href={p.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="inline-flex items-center gap-2 px-5 py-2.5 border border-zinc-700 hover:border-emerald-500 text-zinc-300 hover:text-white text-sm rounded-lg transition-colors"
+                  class="inline-flex items-center gap-2 px-5 py-2.5 bg-black/60 border border-umbrella-line hover:border-umbrella-green text-umbrella-muted hover:text-white font-share-tech-mono uppercase tracking-wider text-sm transition-colors"
                 >
                   {p.network}
                 </a>
@@ -135,7 +133,7 @@ const navItems = [
       <!-- Experience -->
       <section
         id="experience"
-        class="px-8 py-16 lg:px-16 border-t border-zinc-800"
+        class="px-8 py-16 lg:px-16 border-t border-umbrella-line"
       >
         <SectionHeader label="Work" title="Experience" />
         <div class="space-y-10">
@@ -156,7 +154,9 @@ const navItems = [
         {
           volunteer.length > 0 && (
             <div class="mt-16">
-              <h4 class="text-lg font-bold text-white mb-6">Volunteer</h4>
+              <h4 class="text-lg scan-text text-white mb-6 uppercase tracking-wide">
+                Volunteer
+              </h4>
               <div class="space-y-10">
                 {volunteer.map((v: any) => (
                   <TimelineEntry
@@ -164,7 +164,6 @@ const navItems = [
                     subtitle={v.organization}
                     dateRange={dateRange(v.startDate, v.endDate)}
                     summary={v.summary}
-                    accent="cyan"
                   />
                 ))}
               </div>
@@ -176,7 +175,7 @@ const navItems = [
       <!-- Education -->
       <section
         id="education"
-        class="px-8 py-16 lg:px-16 border-t border-zinc-800"
+        class="px-8 py-16 lg:px-16 border-t border-umbrella-line"
       >
         <SectionHeader label="Academic" title="Education" />
         <div class="space-y-8">
@@ -184,10 +183,10 @@ const navItems = [
             education.map((edu: any) => (
               <Card>
                 <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-2">
-                  <h4 class="text-lg font-semibold text-white">
+                  <h4 class="text-lg scan-text text-white uppercase tracking-wide">
                     {edu.studyType} in {edu.area}
                   </h4>
-                  <span class="text-xs text-zinc-500 font-share-tech-mono whitespace-nowrap">
+                  <span class="data-glow text-xs font-share-tech-mono whitespace-nowrap">
                     {dateRange(edu.startDate, edu.endDate)}
                   </span>
                 </div>
@@ -195,13 +194,13 @@ const navItems = [
                   href={edu.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="text-sm text-emerald-400 hover:text-emerald-300 transition-colors"
+                  class="text-sm text-umbrella-green hover:text-white transition-colors"
                 >
                   {edu.institution}
                 </a>
                 {edu.score && (
-                  <p class="text-xs text-zinc-500 mt-2">
-                    GPA: <span class="text-zinc-300">{edu.score}</span>
+                  <p class="text-xs text-umbrella-muted mt-2">
+                    GPA: <span class="data-glow">{edu.score}</span>
                   </p>
                 )}
                 {edu.courses && edu.courses.length > 0 && (
@@ -218,17 +217,20 @@ const navItems = [
       </section>
 
       <!-- Skills -->
-      <section id="skills" class="px-8 py-16 lg:px-16 border-t border-zinc-800">
+      <section
+        id="skills"
+        class="px-8 py-16 lg:px-16 border-t border-umbrella-line"
+      >
         <SectionHeader label="Expertise" title="Skills" />
         <div class="space-y-8">
           {
             skills.map((skill: any) => (
               <div>
                 <div class="flex items-baseline justify-between mb-3">
-                  <h4 class="text-base font-semibold text-white">
+                  <h4 class="text-base scan-text text-white uppercase tracking-wide">
                     {skill.name}
                   </h4>
-                  <span class="text-xs text-zinc-500 font-share-tech-mono">
+                  <span class="data-glow text-xs font-share-tech-mono">
                     {skill.level}
                   </span>
                 </div>
@@ -246,7 +248,7 @@ const navItems = [
       <!-- Projects -->
       <section
         id="projects"
-        class="px-8 py-16 lg:px-16 border-t border-zinc-800"
+        class="px-8 py-16 lg:px-16 border-t border-umbrella-line"
       >
         <SectionHeader label="Built" title="Projects" />
         <div class="grid gap-6 sm:grid-cols-2">
@@ -254,11 +256,11 @@ const navItems = [
             projects.map((proj: any) => (
               <Card href={proj.url || null}>
                 <div class="flex items-start justify-between mb-3">
-                  <h4 class="text-lg font-semibold text-white group-hover:text-emerald-400 transition-colors">
+                  <h4 class="text-lg scan-text text-white group-hover:text-umbrella-green uppercase tracking-wide transition-colors">
                     {proj.name}
                   </h4>
                   {proj.url && (
-                    <span class="text-zinc-500 group-hover:text-emerald-400 transition-colors">
+                    <span class="text-umbrella-muted group-hover:text-umbrella-green transition-colors">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         class="w-4 h-4"
@@ -276,8 +278,8 @@ const navItems = [
                     </span>
                   )}
                 </div>
-                <p class="text-sm text-zinc-400 mb-3">{proj.description}</p>
-                <span class="text-xs text-zinc-600 font-share-tech-mono">
+                <p class="text-sm scan-text mb-3">{proj.description}</p>
+                <span class="data-glow text-xs font-share-tech-mono">
                   {dateRange(proj.startDate, proj.endDate)}
                 </span>
                 <Highlights items={proj.highlights || []} />
@@ -288,23 +290,26 @@ const navItems = [
       </section>
 
       <!-- Awards -->
-      <section id="awards" class="px-8 py-16 lg:px-16 border-t border-zinc-800">
+      <section
+        id="awards"
+        class="px-8 py-16 lg:px-16 border-t border-umbrella-line"
+      >
         <SectionHeader label="Recognition" title="Awards" />
         <div class="space-y-4">
           {
             awards.map((award: any) => (
               <Card>
                 <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-1">
-                  <h4 class="text-base font-semibold text-white">
+                  <h4 class="text-base scan-text text-white uppercase tracking-wide">
                     {award.title}
                   </h4>
-                  <span class="text-xs text-zinc-500 font-share-tech-mono whitespace-nowrap">
+                  <span class="data-glow text-xs font-share-tech-mono whitespace-nowrap">
                     {formatDate(award.date)}
                   </span>
                 </div>
-                <p class="text-sm text-emerald-400">{award.awarder}</p>
+                <p class="text-sm text-umbrella-green">{award.awarder}</p>
                 {award.summary && (
-                  <p class="text-sm text-zinc-400 mt-2">{award.summary}</p>
+                  <p class="text-sm scan-text mt-2">{award.summary}</p>
                 )}
               </Card>
             ))
@@ -315,18 +320,18 @@ const navItems = [
       <!-- Certificates -->
       <section
         id="certificates"
-        class="px-8 py-16 lg:px-16 border-t border-zinc-800"
+        class="px-8 py-16 lg:px-16 border-t border-umbrella-line"
       >
         <SectionHeader label="Credentials" title="Certificates" />
         <div class="grid gap-4 sm:grid-cols-2">
           {
             certificates.map((cert: any) => (
               <Card href={cert.url}>
-                <h4 class="text-base font-semibold text-white group-hover:text-emerald-400 transition-colors">
+                <h4 class="text-base scan-text text-white group-hover:text-umbrella-green uppercase tracking-wide transition-colors">
                   {cert.name}
                 </h4>
-                <p class="text-sm text-zinc-500 mt-1">{cert.issuer}</p>
-                <span class="text-xs text-zinc-600 font-share-tech-mono mt-2 block">
+                <p class="text-sm text-umbrella-muted mt-1">{cert.issuer}</p>
+                <span class="data-glow text-xs font-share-tech-mono mt-2 block">
                   {formatDate(cert.date)}
                 </span>
               </Card>
@@ -338,7 +343,7 @@ const navItems = [
       <!-- Publications -->
       <section
         id="publications"
-        class="px-8 py-16 lg:px-16 border-t border-zinc-800"
+        class="px-8 py-16 lg:px-16 border-t border-umbrella-line"
       >
         <SectionHeader label="Published" title="Publications" />
         <div class="space-y-4">
@@ -346,16 +351,16 @@ const navItems = [
             publications.map((pub: any) => (
               <Card href={pub.url}>
                 <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-1">
-                  <h4 class="text-base font-semibold text-white group-hover:text-emerald-400 transition-colors">
+                  <h4 class="text-base scan-text text-white group-hover:text-umbrella-green uppercase tracking-wide transition-colors">
                     {pub.name}
                   </h4>
-                  <span class="text-xs text-zinc-500 font-share-tech-mono whitespace-nowrap">
+                  <span class="data-glow text-xs font-share-tech-mono whitespace-nowrap">
                     {formatDate(pub.releaseDate)}
                   </span>
                 </div>
-                <p class="text-sm text-emerald-400">{pub.publisher}</p>
+                <p class="text-sm text-umbrella-green">{pub.publisher}</p>
                 {pub.summary && (
-                  <p class="text-sm text-zinc-400 mt-2">{pub.summary}</p>
+                  <p class="text-sm scan-text mt-2">{pub.summary}</p>
                 )}
               </Card>
             ))
@@ -366,7 +371,7 @@ const navItems = [
       <!-- Languages & Interests -->
       <section
         id="languages"
-        class="px-8 py-16 lg:px-16 border-t border-zinc-800"
+        class="px-8 py-16 lg:px-16 border-t border-umbrella-line"
       >
         <div class="grid gap-16 sm:grid-cols-2">
           <div>
@@ -374,11 +379,11 @@ const navItems = [
             <div class="space-y-4">
               {
                 languages.map((lang: any) => (
-                  <div class="flex items-center justify-between p-4 bg-zinc-900 border border-zinc-800 rounded-xl">
-                    <span class="text-base text-white font-medium">
+                  <div class="flex items-center justify-between p-4 bg-umbrella-surface border border-umbrella-line hover:border-umbrella-green/50 transition-colors">
+                    <span class="text-base scan-text text-white uppercase tracking-wide font-medium">
                       {lang.language}
                     </span>
-                    <span class="text-xs text-zinc-500 font-share-tech-mono">
+                    <span class="data-glow text-xs font-share-tech-mono">
                       {lang.fluency}
                     </span>
                   </div>
@@ -393,7 +398,7 @@ const navItems = [
               {
                 interests.map((interest: any) => (
                   <Card>
-                    <h4 class="text-base text-white font-medium mb-2">
+                    <h4 class="text-base scan-text text-white uppercase tracking-wide font-medium mb-2">
                       {interest.name}
                     </h4>
                     <div class="flex flex-wrap gap-2">
@@ -414,15 +419,17 @@ const navItems = [
         references.length > 0 && (
           <section
             id="references"
-            class="px-8 py-16 lg:px-16 border-t border-zinc-800"
+            class="px-8 py-16 lg:px-16 border-t border-umbrella-line"
           >
             <SectionHeader label="Endorsed By" title="References" />
             <div class="grid gap-4 sm:grid-cols-2">
               {references.map((ref: any) => (
                 <Card hover={false}>
-                  <h4 class="text-base font-semibold text-white">{ref.name}</h4>
+                  <h4 class="text-base scan-text text-white uppercase tracking-wide">
+                    {ref.name}
+                  </h4>
                   {ref.reference && (
-                    <p class="text-sm text-zinc-400 mt-2 italic">
+                    <p class="text-sm scan-text mt-2 italic">
                       "{ref.reference}"
                     </p>
                   )}
@@ -434,11 +441,11 @@ const navItems = [
       }
 
       <!-- Footer -->
-      <footer class="px-8 py-8 lg:px-16 border-t border-zinc-800">
+      <footer class="px-8 py-8 lg:px-16 border-t border-umbrella-line">
         <div
           class="flex flex-col sm:flex-row items-center justify-between gap-4"
         >
-          <p class="text-xs text-zinc-600">
+          <p class="text-xs text-umbrella-muted font-share-tech-mono">
             &copy; {new Date().getFullYear()}
             {basics.name}. All rights reserved.
           </p>
@@ -449,7 +456,7 @@ const navItems = [
                   href={p.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="text-xs text-zinc-600 hover:text-emerald-400 transition-colors"
+                  class="text-xs text-umbrella-muted hover:text-umbrella-green font-share-tech-mono uppercase tracking-wider transition-colors"
                 >
                   {p.network}
                 </a>
@@ -457,7 +464,7 @@ const navItems = [
             }
             <a
               href={`mailto:${basics.email}`}
-              class="text-xs text-zinc-600 hover:text-emerald-400 transition-colors"
+              class="text-xs text-umbrella-muted hover:text-umbrella-green font-share-tech-mono uppercase tracking-wider transition-colors"
               >Email</a
             >
           </div>

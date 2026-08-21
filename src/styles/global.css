@@ -1,14 +1,125 @@
 @import "tailwindcss";
-@import "@fontsource/inter/400.css";
-@import "@fontsource/inter/500.css";
-@import "@fontsource/inter/600.css";
-@import "@fontsource/inter/700.css";
-@import "@fontsource/share-tech/400.css";
-@import "@fontsource/share-tech-mono/400.css";
+@import "@fontsource/share-tech-mono";
+@import "@fontsource/share-tech";
 
 @theme {
-  --font-share-tech: "Share Tech", monospace;
-  --font-share-tech-mono: "Share Tech Mono", monospace;
-  /* Inject custom font families */
-  --font-display: "Inter", sans-serif;
+  /* Project Umbrella - Tactical Palette */
+  --color-umbrella-bg: #121212;
+  --color-umbrella-surface: #1a1a1a;
+  --color-umbrella-line: #333333;
+  --color-umbrella-green: #4caf50;
+  --color-umbrella-amber: #ffd700;
+  --color-umbrella-text: #e0e0e0;
+  --color-umbrella-muted: #888888;
+
+  --font-share-tech-mono: "Share Tech Mono", "Courier New", monospace;
+  --font-display: "Share Tech", "Courier New", monospace;
+}
+
+/* Fog layers: soft drifting gradients (see .re-fog) */
+.re-screen {
+  background-color: var(--color-umbrella-bg);
+  position: relative;
+  scroll-behavior: smooth;
+}
+
+.re-fog {
+  position: fixed;
+  inset: -20%;
+  pointer-events: none;
+  filter: blur(60px);
+}
+
+@keyframes fog-drift {
+  0% {
+    transform: translate3d(-8%, -6%, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(7%, 6%, 0) scale(1.25);
+  }
+  100% {
+    transform: translate3d(-8%, -6%, 0) scale(1);
+  }
+}
+
+.re-fog-1 {
+  z-index: 1;
+  opacity: 0.4;
+  animation: fog-drift 38s ease-in-out infinite;
+  background:
+    radial-gradient(
+      42% 42% at 22% 28%,
+      rgba(250, 255, 250, 0.3),
+      transparent 70%
+    ),
+    radial-gradient(
+      36% 36% at 78% 72%,
+      rgba(212, 220, 225, 0.35),
+      transparent 70%
+    );
+}
+
+.re-fog-2 {
+  z-index: 1;
+  opacity: 0.4;
+  animation: fog-drift 52s ease-in-out infinite reverse;
+  background:
+    radial-gradient(
+      40% 40% at 70% 20%,
+      rgba(245, 230, 215, 0.28),
+      transparent 70%
+    ),
+    radial-gradient(
+      46% 46% at 30% 80%,
+      rgba(225, 225, 245, 0.33),
+      transparent 70%
+    );
+}
+
+/* Vignette: darken corners to focus the eye */
+.re-screen::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+  box-shadow: inset 0 0 180px rgba(0, 0, 0, 0.85);
+}
+
+/* HUD prompt boxes (L1 / R2 style controller prompts) */
+.hud-prompt {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid #555555;
+  color: #ffffff;
+  padding: 2px 6px;
+  font-size: 12px;
+  font-family: var(--font-share-tech-mono);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Amber glowing data highlight for codes/dates/numbers */
+.data-glow {
+  color: var(--color-umbrella-amber);
+  text-shadow: 0 0 4px rgba(255, 215, 0, 0.5);
+}
+
+/* Scanned-document text effect */
+.scan-text {
+  text-shadow: 0 0 2px rgba(224, 224, 224, 0.25);
+  letter-spacing: 0.5px;
+}
+
+/* Active list item highlight bar */
+.re-active {
+  background: rgba(76, 175, 80, 0.1);
+  border-left: 4px solid var(--color-umbrella-green);
+  color: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
 }

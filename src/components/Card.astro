@@ -6,8 +6,10 @@ interface Props {
 
 const { href, hover = true } = Astro.props;
 
-const base = "bg-zinc-900 border border-zinc-800 rounded-xl p-5 transition-colors";
-const interactive = hover ? "hover:border-emerald-500/30 group" : "";
+const base = "bg-umbrella-surface border border-umbrella-line p-5 transition-colors";
+const interactive = hover
+  ? "hover:border-umbrella-green/60 hover:bg-white/5 group"
+  : "";
 ---
 
 {href ? (
