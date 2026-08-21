@@ -1,5 +1,6 @@
 ---
 import Avatar from "./Avatar.astro";
+import "@fontsource/inter";
 
 interface NavItem {
   id: string;
@@ -23,22 +24,20 @@ const { name, initials, label, navItems } = Astro.props;
     <div class="flex items-center gap-3">
       <Avatar initials={initials} size="sm" />
       <div>
-        <h1 class="text-sm scan-text text-white uppercase tracking-wider">{name}</h1>
+        <h1 class="text-sm scan-text text-white uppercase tracking-wider">
+          {name}
+        </h1>
         <p class="text-xs data-glow font-share-tech-mono">{label}</p>
       </div>
     </div>
-    <nav class="flex items-center gap-2">
+    <nav class="flex items-center gap-2 pl-2">
       {
         navItems.slice(0, 3).map((item) => (
-          <a
-            href={`#${item.id}`}
-            class="hud-prompt"
-          >
+          <a href={`#${item.id}`} class="hud-prompt">
             {item.label}
           </a>
         ))
       }
-      <span class="hud-prompt">R1</span>
     </nav>
   </div>
 </header>
